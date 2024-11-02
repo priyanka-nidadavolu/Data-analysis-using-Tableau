@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Project Dashboard</title>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Inline CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .chart-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .chart-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        .chart-item h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .chart-item canvas {
+            margin-top: 1rem;
+            max-height: 400px;
+        }
+
+        .chart-description {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .project-analysis {
+            margin-top: 2rem;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-analysis h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: #333;
+        }
+
+        .section {
+            margin-top: 2rem;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Customer Response Analysis in Direct Marketing Campaigns</h1>
+    </header>
+    
+    <main>
+        <div class="project-analysis">
+            <h2>About the Data</h2>
+            <p>
+                The data pertains to direct marketing campaigns conducted by a Portuguese bank, which relied on phone calls to reach clients. In many cases, multiple calls were necessary to determine if a client would subscribe ('yes') or not ('no') to a term deposit.
+                <br>
+                The dataset includes four files:
+                <br>
+                <strong>bank-additional-full.csv:</strong> Contains all 41,188 examples with 20 input features, sorted by date (from May 2008 to November 2010), similar to the data used in [Moro et al., 2014].<br>
+                <strong>bank-additional.csv:</strong> A 10% sample (4,119 examples) randomly selected from the first dataset, with the same 20 inputs.<br>
+                <strong>bank-full.csv:</strong> Includes all examples with 17 inputs, also sorted by date (an older version of the dataset with fewer inputs).<br>
+                <strong>bank.csv:</strong> A 10% sample from the previous file, containing 17 inputs (an older version with fewer inputs).<br>
+                Smaller datasets are available to facilitate testing with computationally intensive machine learning algorithms, such as SVM.<br>
+                <br>
+                The objective is to predict whether a client will subscribe (yes/no) to a term deposit (variable y).
+            </p>
+            <p>
+                Input Variables: <br><br>
+
+                1. job - Type of job (categorical: 'admin.', 'blue-collar', 'entrepreneur', 'housemaid', 'management', 'retired', 'self-employed', 'services', 'student', 'technician', 'unemployed', 'unknown')<br>
+                2. marital - Marital status (categorical: 'divorced', 'married', 'single', 'unknown'; note: 'divorced' includes divorced and widowed)<br>
+                3. education - Education level (categorical: 'basic.4y', 'basic.6y', 'basic.9y', 'high.school', 'illiterate', 'professional.course', 'university.degree', 'unknown')<br>
+                4. default - Has credit in default? (categorical: 'no', 'yes', 'unknown')<br>
+                5. housing - Has a housing loan? (categorical: 'no', 'yes', 'unknown')<br>
+                6. loan - Has a personal loan? (categorical: 'no', 'yes', 'unknown')<br>
+                7. contact - Contact communication type (categorical: 'cellular', 'telephone')<br>
+                8. month - Last contact month of the year (categorical: 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec')<br>
+                9. day_of_week - Last contact day of the week (categorical: 'mon', 'tue', 'wed', 'thu', 'fri')<br>
+                10. duration - Last contact duration in seconds (numeric; significant impact on target output, should be excluded for realistic predictive modeling)<br>
+                11. campaign - Number of contacts performed during this campaign for this client (numeric, includes last contact)<br>
+                12. pdays - Days since last contact with the client from a previous campaign (numeric; 999 indicates no prior contact)<br>
+                13. previous - Number of contacts performed before this campaign for this client (numeric)<br>
+                14. poutcome - Outcome of the previous marketing campaign (categorical: 'failure', 'nonexistent', 'success')<br>
+                15. emp.var.rate - Employment variation rate - quarterly indicator (numeric)<br>
+                16. cons.price.idx - Consumer price index - monthly indicator (numeric)<br>
+                17. cons.conf.idx - Consumer confidence index - monthly indicator (numeric)<br>
+                18. euribor3m - Euribor 3-month rate - daily indicator (numeric)<br>
+                19. nr.employed - Number of employees - quarterly indicator (numeric)<br>
+                20. y - Target variable: has the client subscribed to a term deposit? (binary: 'yes', 'no')<br>
+                21. age - Age of the client (numeric)
+            </p>
+        </div>
+        <!-- Python Visualizations Section -->
+        <div class="section">
+            <h2>Python Visualizations</h2>
+            <div class="chart-container">
+                <!-- Chart 1: Sales Data -->
+                <div class="chart-item">
+                    <h2>Client Job Distribution by Age</h2>
+                    <img src="pic1.png"></img>
+                    <p class="chart-description">
+                        The bar chart illustrates the distribution of clients across different age groups and job types within the dataset. The x-axis represents the ages of clients, while the y-axis denotes the number of clients in each job category. Each bar's height shows the frequency of clients of a specific age working in a given job role. This visualization helps identify trends in job distribution across various age groups, which could be useful for understanding target demographics for marketing campaigns. For instance, certain jobs might have higher frequencies within specific age brackets, indicating potential target groups for the bank's term deposit offers.
+                    </p>
+                </div>
+
+                <!-- Chart 2: User Growth -->
+                <div class="chart-item">
+                    <h2>Trend of Previous Client Contacts</h2>
+                    <img src="pic2.png"></img>
+                    <p class="chart-description">
+                        The line chart displays the trend of the previous variable, which represents the number of contacts made with each client prior to the current campaign. The x-axis shows the index or order of data entries, while the y-axis indicates the number of previous contacts for each client. This visualization allows us to observe patterns over the dataset, such as any peaks or drops in the frequency of previous contacts. Such trends may reveal insights into client engagement history and could inform strategies to enhance campaign effectiveness based on prior interactions.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="chart-container">
+                <!-- Chart 1: Sales Data -->
+                <div class="chart-item">
+                    <h2>Campaign Contact Frequency per Client</h2>
+                    <img src="pic3.png"></img>
+                    <p class="chart-description">
+                        <br><br><br>The line chart shows the trend for the campaign variable, representing the number of contacts made during the current campaign for each client. The x-axis corresponds to the data entry index or order, and the y-axis shows the number of contacts per client. This visualization provides insights into the frequency of campaign contacts across clients, highlighting any potential spikes or patterns in the campaign's outreach efforts. By analyzing these trends, we can gauge the intensity of contact attempts and assess the effectiveness or saturation of the campaign, which could help optimize future marketing strategies.                    </p>
+                </div>
+
+                <!-- Chart 2: User Growth -->
+                <div class="chart-item">
+                    <h2>Correlation Matrix of Client Attributes</h2>
+                    <img src="pic4.png"></img>
+                    <p class="chart-description">
+                        The heatmap provides a visual overview of the correlation matrix, showing the strength and direction of relationships between variables in the dataset. Using a "YlGnBu" color scheme, lighter colors indicate weaker or negative correlations, while darker shades signify stronger positive correlations. Each cell includes an annotation with the exact correlation value, making it easy to identify significant associations between variables. This visualization is useful for quickly spotting patterns, aiding in feature selection, and gaining insights into how different variables might interact within the dataset.                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tableau Visualizations Section -->
+        <div class="section">
+            <h2>Tableau Visualizations</h2>
+            <div class="chart-container">
+                <!-- Embed Tableau Visualization 1 -->
+                <div class="chart-item">
+                    <h2>Revenue Breakdown</h2>
+                    <iframe src="https://public.tableau.com/views/YourTableauDashboardURL" width="100%" height="400px"></iframe>
+                    <p class="chart-description">
+                        This Tableau visualization shows the revenue contribution by different products. Products A and C
+                        dominate the revenue streams, making up a combined 55% of total revenue. This insight
+                        helps identify the best-performing products and areas where resources could be concentrated
+                        for maximum impact.
+                    </p>
+                </div>
+
+                <!-- Embed Tableau Visualization 2 -->
+                <div class="chart-item">
+                    <h2>Product Popularity</h2>
+                    <iframe src="https://public.tableau.com/views/YourTableauDashboardURL" width="100%" height="400px"></iframe>
+                    <p class="chart-description">
+                        This Tableau visualization reflects popularity levels of various products based on user engagement.
+                        Product C stands out as the most popular, while Product E has the least engagement.
+                        This could inform future development focus or promotional activities to boost underperforming products.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Analysis Section -->
+        <div class="project-analysis">
+            <h2>Project Analysis</h2>
+            <p>
+                This dashboard provides a comprehensive overview of key business metrics and performance indicators, 
+                offering valuable insights into various aspects of the business. The sales data visualization allows 
+                us to understand monthly trends and seasonal spikes, suggesting timing strategies for marketing campaigns.
+                Additionally, user growth over the years reflects the company's successful user acquisition efforts, 
+                highlighting areas for continued growth.
+            </p>
+            <p>
+                The revenue breakdown chart helps identify top-performing products, allowing for targeted resource allocation 
+                to maximize revenue impact. Furthermore, product popularity insights inform decisions on which products 
+                might benefit from increased promotion or development focus.
+            </p>
+            <p>
+                Overall, this analysis underscores the importance of data-driven decision-making in optimizing business 
+                strategies, resource allocation, and marketing efforts. By leveraging these insights, the company can 
+                strengthen its position in the market and continue to grow its user base while enhancing product offerings.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Project Name. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Inline JavaScript for initializing the charts -->
+    <script>
+        // Sales Data Chart
+        const salesChartCtx = document.getElementById('salesChart').getContext('2d');
+        new Chart(salesChartCtx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Sales ($)',
+                    data: [12000, 15000, 10000, 22000, 20000, 25000],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // User Growth Chart
+        const userGrowthChartCtx = document.getElementById('userGrowthChart').getContext('2d');
+        new Chart(userGrowthChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2019', '2020', '2021', '2022', '2023'],
+                datasets: [{
+                    label: 'Users',
+                    data: [500, 1000, 1500, 2000, 2500],
+                    backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+
+</body>
+</html>
