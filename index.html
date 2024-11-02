@@ -103,6 +103,43 @@
                 grid-template-columns: 1fr;
             }
         }
+        .zoom-image {
+            cursor: pointer;
+            width: auto; /* Set the initial size of the thumbnail */
+        }
+
+        /* Modal (overlay) style */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Bring it to the front */
+        }
+
+        /* Full-screen image style */
+        .modal-content {
+            width: auto; /* Adjusts to fit the screen */
+            height: auto; /* Maintains aspect ratio */
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -112,6 +149,10 @@
     </header>
     
     <main>
+        <div class="project-analysis">
+            <h2>Objective of the project</h2>
+            <p>The main objective of the project is to visualize and make analysis of the given data. The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.</p>
+        </div>
         <div class="project-analysis">
             <h2>About the Data</h2>
             <p>
@@ -201,25 +242,130 @@
             <div class="chart-container">
                 <!-- Embed Tableau Visualization 1 -->
                 <div class="chart-item">
-                    <h2>Revenue Breakdown</h2>
-                    <iframe src="https://public.tableau.com/views/YourTableauDashboardURL" width="100%" height="400px"></iframe>
-                    <p class="chart-description">
-                        This Tableau visualization shows the revenue contribution by different products. Products A and C
-                        dominate the revenue streams, making up a combined 55% of total revenue. This insight
-                        helps identify the best-performing products and areas where resources could be concentrated
-                        for maximum impact.
-                    </p>
+                    <h2>Contact and Education Distribution</h2>
+                    <p>Dataset Used: Bank-additional-full.csv</p>
+                    <img src="tab1.png" style="height: 550px;" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                      </div>
                 </div>
-
                 <!-- Embed Tableau Visualization 2 -->
                 <div class="chart-item">
-                    <h2>Product Popularity</h2>
-                    <iframe src="https://public.tableau.com/views/YourTableauDashboardURL" width="100%" height="400px"></iframe>
-                    <p class="chart-description">
-                        This Tableau visualization reflects popularity levels of various products based on user engagement.
-                        Product C stands out as the most popular, while Product E has the least engagement.
-                        This could inform future development focus or promotional activities to boost underperforming products.
-                    </p>
+                    <h2>Housing and Job Influence on Consumer Indices</h2>
+                    <p>Dataset Used: Bank-additional.csv</p>
+                    <img src="tab2.png" style="height: 550px; width: 550px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                      </div>
+                </div>
+                <div class="chart-item">
+                    <h2>Impact of Loan and Marital Status on Duration and Pdays</h2>
+                    <p>Dataset Used: Bank-full.csv</p>
+                    <img src="tab3.png" style="height: 380px;" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                      </div>
+                </div>
+                <!-- Embed Tableau Visualization 2 -->
+                <div class="chart-item">
+                    <h2>Housing and Job Influence on Consumer Indices</h2>
+                    <p>Dataset Used: Bank-additional.csv</p>
+                    <img src="tab4.png" style="height: 380px; width: 550px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                      </div>
+                </div>
+                
+            </div>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Dashboard - 1</h2>
+                <img src="dash1.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Dashboard - 2</h2>
+                <img src="dash2.png" style="height: 380px; width: 1200px;  object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Dashboard - 3</h2>
+                <img src="dash3.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Distribution of Contact Method and Education Level in Dataset</h2>
+                <p>The graph illustrates the relationship between contact methods and education levels within the dataset. It shows that individuals with a university degree contacted via cellular methods have the highest count, while those with a basic education of 9 years have the lowest count.</p>
+                <img src="story1.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Impact of Housing and Job Type on Consumer Confidence and Price Index</h2>
+                <p>The graph analyzes the relationship between housing status and job types concerning the sum of consumer confidence and consumer price indices. It reveals that a majority of respondents have housing loans ('yes'), with very few cases marked as 'unknown' regarding housing status. This suggests a strong prevalence of housing among individuals in the dataset.</p>
+                <img src="story2.png" style="height: 380px; width: 1200px;  object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Tree Map of Loan Status and Marital Status Impact on Duration and Pdays</h2>
+                <p>The tree map illustrates the relationship between loan status and marital status in relation to the sum of duration and Pdays. The analysis indicates that married individuals tend to have a higher number of Pdays, suggesting a greater engagement with loan services compared to other marital statuses. This insight highlights the importance of marital context in understanding loan dynamics within the dataset.</p>
+                <img src="story3.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Analysis of Potcome, Subscription Status, and Monthly Counts in Dataset</h2>
+                <p>The analysis examines the relationship between the outcome of previous marketing campaigns (Potcome), subscription status (Y), and the count of records per month. The findings reveal that May has the highest count, indicating a significant level of engagement during this month compared to others in the dataset. This pattern suggests that marketing efforts may have been particularly effective in May.</p>
+                <img src="story4.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Dashboard Overview of Bank-full and Bank Datasets</h2>
+                <p>This dashboard presents detailed insights into the bank-full and bank datasets, which are not ordered by date. It highlights key metrics, distributions, and characteristics of the data, enabling users to explore patterns and trends without the influence of chronological ordering. This format allows for a comprehensive understanding of customer behaviors and outcomes within the datasets.</p>
+                <img src="story5.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Dashboard Overview of Bank-additional-full and Bank-additional Datasets</h2>
+                <p>This dashboard provides a comprehensive overview of the bank-additional-full and bank-additional datasets, both of which are ordered by date. It showcases essential metrics, trends, and distributions, allowing for an analysis of how marketing campaigns have evolved over time. This chronological organization facilitates a deeper understanding of customer responses and campaign effectiveness, highlighting key insights for strategic decision-making.</p>
+                <img src="story6.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div><br>
+            <div class="chart-item" style="width: 1200px;">
+                <h2>Comprehensive Dashboard of Portuguese Banking Institution Datasets</h2>
+                <p>This dashboard presents visualizations of all four datasets from the Portuguese banking institution, including bank-additional-full, bank-additional, bank-full, and bank. Each visualization offers insights into various aspects of the marketing campaigns, customer demographics, and responses to term deposit subscriptions. By integrating data from these datasets, the dashboard enables users to explore trends, patterns, and correlations, supporting informed decision-making and strategy development in direct marketing efforts.</p>
+                <img src="story7.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
                 </div>
             </div>
         </div>
@@ -228,21 +374,19 @@
         <div class="project-analysis">
             <h2>Project Analysis</h2>
             <p>
-                This dashboard provides a comprehensive overview of key business metrics and performance indicators, 
-                offering valuable insights into various aspects of the business. The sales data visualization allows 
-                us to understand monthly trends and seasonal spikes, suggesting timing strategies for marketing campaigns.
-                Additionally, user growth over the years reflects the company's successful user acquisition efforts, 
-                highlighting areas for continued growth.
+                The analysis of the Portuguese banking datasets reveals crucial insights into customer behavior and campaign effectiveness. By leveraging these findings, the bank can enhance its marketing strategies, tailor communications to target demographics more effectively, and ultimately increase the success rate of term deposit subscriptions. Further analysis could involve predictive modeling to forecast client responses based on historical data.
             </p>
+            <h2>Key Findings</h2>
             <p>
-                The revenue breakdown chart helps identify top-performing products, allowing for targeted resource allocation 
-                to maximize revenue impact. Furthermore, product popularity insights inform decisions on which products 
-                might benefit from increased promotion or development focus.
-            </p>
+                Customer Engagement: Cellular contact methods yielded the highest engagement rates, particularly among individuals with university degrees.<br>
+                Marital Status and Loan Impact: Married individuals were more likely to have higher Pdays, indicating a stronger connection to previous marketing efforts.<br>
+                Monthly Trends: The month of May exhibited the highest count of customer interactions and subscriptions, suggesting effective campaign timing.<br>
+                Housing Status: The majority of customers reported having housing loans, with minimal cases marked as unknown, indicating a strong prevalence of housing.</p>
+            <h2>Recommendations</h2>
             <p>
-                Overall, this analysis underscores the importance of data-driven decision-making in optimizing business 
-                strategies, resource allocation, and marketing efforts. By leveraging these insights, the company can 
-                strengthen its position in the market and continue to grow its user base while enhancing product offerings.
+                Focus marketing efforts on segments with the highest engagement rates, such as university-educated individuals.<br>
+                Continuously monitor the influence of housing status and other socio-economic factors on customer responses.<br>
+                Analyze the success of campaigns during peak months (like May) to optimize future marketing strategies.
             </p>
         </div>
     </main>
@@ -291,6 +435,18 @@
                 responsive: true
             }
         });
+        function openModal() {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "flex"; // Shows the modal in flex mode
+            modalImg.src = event.target.src; // Uses the clicked image as the source
+        }
+
+        // Close the modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none"; // Hides the modal
+        }
     </script>
 
 </body>
