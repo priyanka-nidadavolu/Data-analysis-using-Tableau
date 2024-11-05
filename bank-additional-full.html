@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Data Visualization Techniques</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Data Visualization</a>
+            <!-- Sidebar Toggle-->
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="index.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Home</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="charts.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Charts</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="dashboards.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Dashboards</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="stories.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Stories</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Datasets</i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="bank.html">Bank</a></li>
+                        <li><a class="dropdown-item" href="bank-full.html">Bank-full</a></li>
+                        <li><a class="dropdown-item" href="bank-additional.html">Bank-additional</a></li>
+                        <li><a class="dropdown-item" href="bank-additional-full.html">Bank-additional-full</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Bank-additional-full Dataset</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Bank-additional-full.csv</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                Contains all 41,188 examples with 20 input features, sorted by date (from May 2008 to November 2010), similar to the data used in [Moro et al., 2014].
+                                
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                DataTable Head:
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>age</th>
+                                            <th>job</th>
+                                            <th>marital</th>
+                                            <th>education</th>
+                                            <th>default</th>
+                                            <th>housing</th>
+                                            <th>loan</th>
+                                            <th>contact</th>
+                                            <th>month</th>
+                                            <th>day_of_week</th>
+                                            <th>duration</th>
+                                            <th>campaign</th>
+                                            <th>pdays</th>
+                                            <th>previous</th>
+                                            <th>poutcome</th>
+                                            <th>emp.var.rate</th>
+                                            <th>cons.price.idx</th>
+                                            <th>cons.conf.idx</th>
+                                            <th>euribor3m</th>
+                                            <th>nr.employed</th>
+                                            <th>y</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>age</th>
+                                            <th>job</th>
+                                            <th>marital</th>
+                                            <th>education</th>
+                                            <th>default</th>
+                                            <th>housing</th>
+                                            <th>loan</th>
+                                            <th>contact</th>
+                                            <th>month</th>
+                                            <th>day_of_week</th>
+                                            <th>duration</th>
+                                            <th>campaign</th>
+                                            <th>pdays</th>
+                                            <th>previous</th>
+                                            <th>poutcome</th>
+                                            <th>emp.var.rate</th>
+                                            <th>cons.price.idx</th>
+                                            <th>cons.conf.idx</th>
+                                            <th>euribor3m</th>
+                                            <th>nr.employed</th>
+                                            <th>y</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                            <tr>
+                                              <td>56</td>
+                                              <td>housemaid</td>
+                                              <td>married</td>
+                                              <td>basic.4y</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>261</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>57</td>
+                                              <td>services</td>
+                                              <td>married</td>
+                                              <td>high.school</td>
+                                              <td>unknown</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>149</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>37</td>
+                                              <td>services</td>
+                                              <td>married</td>
+                                              <td>high.school</td>
+                                              <td>no</td>
+                                              <td>yes</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>226</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>40</td>
+                                              <td>admin.</td>
+                                              <td>married</td>
+                                              <td>basic.6y</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>151</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>56</td>
+                                              <td>services</td>
+                                              <td>married</td>
+                                              <td>high.school</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>yes</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>307</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>45</td>
+                                              <td>services</td>
+                                              <td>married</td>
+                                              <td>basic.9y</td>
+                                              <td>unknown</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>198</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>59</td>
+                                              <td>admin.</td>
+                                              <td>married</td>
+                                              <td>professional.course</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>139</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>41</td>
+                                              <td>blue-collar</td>
+                                              <td>married</td>
+                                              <td>unknown</td>
+                                              <td>unknown</td>
+                                              <td>no</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>217</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>24</td>
+                                              <td>technician</td>
+                                              <td>single</td>
+                                              <td>professional.course</td>
+                                              <td>no</td>
+                                              <td>yes</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>380</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                            <tr>
+                                              <td>25</td>
+                                              <td>services</td>
+                                              <td>single</td>
+                                              <td>high.school</td>
+                                              <td>no</td>
+                                              <td>yes</td>
+                                              <td>no</td>
+                                              <td>telephone</td>
+                                              <td>may</td>
+                                              <td>mon</td>
+                                              <td>50</td>
+                                              <td>1</td>
+                                              <td>999</td>
+                                              <td>0</td>
+                                              <td>nonexistent</td>
+                                              <td>1.1</td>
+                                              <td>93.994</td>
+                                              <td>-36.4</td>
+                                              <td>4.857</td>
+                                              <td>5191</td>
+                                              <td>no</td>
+                                            </tr>
+                                          
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

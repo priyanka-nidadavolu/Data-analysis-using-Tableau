@@ -1,453 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Visualization Project Dashboard</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Data Visualization Techniques</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Data Visualization</a>
+            <!-- Sidebar Toggle-->
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="index.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Home</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="charts.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Charts</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="dashboards.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Dashboards</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="stories.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Stories</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Datasets</i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="bank.html">Bank</a></li>
+                        <li><a class="dropdown-item" href="bank-full.html">Bank-full</a></li>
+                        <li><a class="dropdown-item" href="bank-additional.html">Bank-additional</a></li>
+                        <li><a class="dropdown-item" href="bank-additional-full.html">Bank-additional-full</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4" >
+                        <h1 class="mt-4" style="text-align: center;">Customer Response Analysis in Direct Marketing Campaigns<br><br></h1>
+                        <!-- <img src="assets/img/dashboard.webp" style="width: max-content; " data-aos="fade-up" data-aos-delay="100"> -->
+                        <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-    <!-- Chart.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <!-- <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Area Chart Example
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div> -->
+                                    
+                                    <h3 class="mt-4">&nbsp; Objective:</h3>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">The main objective of the project is to visualize and make analysis of the given data. The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.
+                                    </li>
+                                </ol>
+                                
+                                <h3 class="mt-4">&nbsp; Tableau:</h3>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">Tableau is a visual analytics engine that makes it easier to create interactive visual analytics in the form of dashboards. These dashboards make it easier for non-technical analysts and end users to convert data into understandable, interactive graphics. Tableau facilitates the use of data from public sources in conjunction with your proprietary data, enabling new and useful insight. For example, blending census data with your proprietary data can yield new insights into activity by providing normalized results for population.</li>
+                                </ol>
+                                <h3 class="mt-4">&nbsp; Python (Jupyter Notebook):</h3>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">Data visualization in python is perhaps one of the most utilized features for data science with python in today’s day and age. The libraries in python come with lots of different features that enable users to make highly customized, elegant, and interactive plots. Useful packages for visualizations in python are Matplotlib, Seaborn, Bokeh, Altair, plotly, ggplot etc.</li>
+                                </ol>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                
+                                <div class="card mb-4">
+                                    <img src="assets/img/dashboard.jpg" style="height: 605px; width: 740px; border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);" data-aos="fade-up" data-aos-delay="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-    <!-- Inline CSS for styling -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+                        
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="card mb-4">
+                                        <img src="assets/img/dashboard.png" style="height: 495px; width: 700px; border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+      border-radius: var(--bs-card-border-radius);" data-aos="fade-up" data-aos-delay="100">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    
+                                    <div class="card mb-4">
+                                        <h3 class="mt-4">&nbsp; Python Steps:</h3>
+                                    <ol class="breadcrumb mb-4">
+                                        <li class="breadcrumb-item active">
+                                            Importing data<br>
+                                            Basic visualization using Matplotlib<br>
+                                            More advanced visualizations, still using Matplotlib<br>
+                                            Building quick visualizations for data analysis using Seaborn<br>
+                                            Building interactive charts</li>
+                                    </ol>
+                                    <h3 class="mt-4">&nbsp; Tableau Steps:</h3>
+                                    <ol class="breadcrumb mb-4">
+                                        <li class="breadcrumb-item active">
+                                            Connect to your data<br>
+                                            Drag and drop to take a first look<br>
+                                            Focus your results<br>
+                                            Explore your data geographically<br>
+                                            Drill down into the details<br>
+                                            Build a dashboard to show your insights<br>
+                                            Build a story to present<br>
+                                            Share your findings</li>
+                                    </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        <h3>Datasets:</h3>
+                        <div class="col-xl-3 col-md-6">
+                            
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">bank (Dataset - 1)</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="bank.html">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">bank-full (Dataset - 2)</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="bank-full.html">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">bank-additional (Dataset - 3)</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="bank-additional.html">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-danger text-white mb-4">
+                                <div class="card-body">bank-additional-full (Dataset - 4)</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="bank-additional-full.html">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <!-- <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Area Chart Example
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div> -->
+                                    
+                                    <h3 class="mt-4">&nbsp; Project Analysis:</h3>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">The analysis of the Portuguese banking datasets reveals crucial insights into customer behavior and campaign effectiveness. By leveraging these findings, the bank can enhance its marketing strategies, tailor communications to target demographics more effectively, and ultimately increase the success rate of term deposit subscriptions. Further analysis could involve predictive modeling to forecast client responses based on historical data.
+                                    </li>
+                                </ol>
+                                
+                                <h3 class="mt-4">&nbsp; Key Findings:</h3>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">Customer Engagement: Cellular contact methods yielded the highest engagement rates, particularly among individuals with university degrees.<br>
+                                        Marital Status and Loan Impact: Married individuals were more likely to have higher Pdays, indicating a stronger connection to previous marketing efforts.<br>
+                                        Monthly Trends: The month of May exhibited the highest count of customer interactions and subscriptions, suggesting effective campaign timing.<br>
+                                        Housing Status: The majority of customers reported having housing loans, with minimal cases marked as unknown, indicating a strong prevalence of housing.</li>
+                                </ol>
+                                <h3 class="mt-4">&nbsp; Recommendations:</h3>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">Focus marketing efforts on segments with the highest engagement rates, such as university-educated individuals.<br>
+                                        Continuously monitor the influence of housing status and other socio-economic factors on customer responses.
+                                        Analyze the success of campaigns during peak months (like May) to optimize future marketing strategies.</li>
+                                </ol>
+                                </div>
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        main {
-            padding: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .chart-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .chart-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 600px;
-        }
-
-        .chart-item h2 {
-            margin-top: 0;
-            font-size: 1.25rem;
-            color: #333;
-            text-align: center;
-        }
-
-        .chart-item canvas {
-            margin-top: 1rem;
-            max-height: 400px;
-        }
-
-        .chart-description {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .project-analysis {
-            margin-top: 2rem;
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-analysis h2 {
-            font-size: 1.5rem;
-            margin-top: 0;
-            color: #333;
-        }
-
-        .section {
-            margin-top: 2rem;
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .chart-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        .zoom-image {
-            cursor: pointer;
-            width: auto; /* Set the initial size of the thumbnail */
-        }
-
-        /* Modal (overlay) style */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
-            justify-content: center;
-            align-items: center;
-            z-index: 1000; /* Bring it to the front */
-        }
-
-        /* Full-screen image style */
-        .modal-content {
-            width: auto; /* Adjusts to fit the screen */
-            height: auto; /* Maintains aspect ratio */
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        /* Close button */
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Customer Response Analysis in Direct Marketing Campaigns</h1>
-    </header>
-    
-    <main>
-        <div class="project-analysis">
-            <h2>Objective of the project</h2>
-            <p>The main objective of the project is to visualize and make analysis of the given data. The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.</p>
-        </div>
-        <div class="project-analysis">
-            <h2>About the Data</h2>
-            <p>
-                The data pertains to direct marketing campaigns conducted by a Portuguese bank, which relied on phone calls to reach clients. In many cases, multiple calls were necessary to determine if a client would subscribe ('yes') or not ('no') to a term deposit.
-                <br>
-                The dataset includes four files:
-                <br>
-                <strong>bank-additional-full.csv:</strong> Contains all 41,188 examples with 20 input features, sorted by date (from May 2008 to November 2010), similar to the data used in [Moro et al., 2014].<br>
-                <strong>bank-additional.csv:</strong> A 10% sample (4,119 examples) randomly selected from the first dataset, with the same 20 inputs.<br>
-                <strong>bank-full.csv:</strong> Includes all examples with 17 inputs, also sorted by date (an older version of the dataset with fewer inputs).<br>
-                <strong>bank.csv:</strong> A 10% sample from the previous file, containing 17 inputs (an older version with fewer inputs).<br>
-                Smaller datasets are available to facilitate testing with computationally intensive machine learning algorithms, such as SVM.<br>
-                <br>
-                The objective is to predict whether a client will subscribe (yes/no) to a term deposit (variable y).
-            </p>
-            <p>
-                Input Variables: <br><br>
-
-                1. job - Type of job (categorical: 'admin.', 'blue-collar', 'entrepreneur', 'housemaid', 'management', 'retired', 'self-employed', 'services', 'student', 'technician', 'unemployed', 'unknown')<br>
-                2. marital - Marital status (categorical: 'divorced', 'married', 'single', 'unknown'; note: 'divorced' includes divorced and widowed)<br>
-                3. education - Education level (categorical: 'basic.4y', 'basic.6y', 'basic.9y', 'high.school', 'illiterate', 'professional.course', 'university.degree', 'unknown')<br>
-                4. default - Has credit in default? (categorical: 'no', 'yes', 'unknown')<br>
-                5. housing - Has a housing loan? (categorical: 'no', 'yes', 'unknown')<br>
-                6. loan - Has a personal loan? (categorical: 'no', 'yes', 'unknown')<br>
-                7. contact - Contact communication type (categorical: 'cellular', 'telephone')<br>
-                8. month - Last contact month of the year (categorical: 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec')<br>
-                9. day_of_week - Last contact day of the week (categorical: 'mon', 'tue', 'wed', 'thu', 'fri')<br>
-                10. duration - Last contact duration in seconds (numeric; significant impact on target output, should be excluded for realistic predictive modeling)<br>
-                11. campaign - Number of contacts performed during this campaign for this client (numeric, includes last contact)<br>
-                12. pdays - Days since last contact with the client from a previous campaign (numeric; 999 indicates no prior contact)<br>
-                13. previous - Number of contacts performed before this campaign for this client (numeric)<br>
-                14. poutcome - Outcome of the previous marketing campaign (categorical: 'failure', 'nonexistent', 'success')<br>
-                15. emp.var.rate - Employment variation rate - quarterly indicator (numeric)<br>
-                16. cons.price.idx - Consumer price index - monthly indicator (numeric)<br>
-                17. cons.conf.idx - Consumer confidence index - monthly indicator (numeric)<br>
-                18. euribor3m - Euribor 3-month rate - daily indicator (numeric)<br>
-                19. nr.employed - Number of employees - quarterly indicator (numeric)<br>
-                20. y - Target variable: has the client subscribed to a term deposit? (binary: 'yes', 'no')<br>
-                21. age - Age of the client (numeric)
-            </p>
-        </div>
-        <!-- Python Visualizations Section -->
-        <div class="section">
-            <h2>Python Visualizations</h2>
-            <div class="chart-container">
-                <!-- Chart 1: Sales Data -->
-                <div class="chart-item">
-                    <h2>Client Job Distribution by Age</h2>
-                    <img src="pic1.png"></img>
-                    <p class="chart-description">
-                        The bar chart illustrates the distribution of clients across different age groups and job types within the dataset. The x-axis represents the ages of clients, while the y-axis denotes the number of clients in each job category. Each bar's height shows the frequency of clients of a specific age working in a given job role. This visualization helps identify trends in job distribution across various age groups, which could be useful for understanding target demographics for marketing campaigns. For instance, certain jobs might have higher frequencies within specific age brackets, indicating potential target groups for the bank's term deposit offers.
-                    </p>
-                </div>
-
-                <!-- Chart 2: User Growth -->
-                <div class="chart-item">
-                    <h2>Trend of Previous Client Contacts</h2>
-                    <img src="pic2.png"></img>
-                    <p class="chart-description">
-                        The line chart displays the trend of the previous variable, which represents the number of contacts made with each client prior to the current campaign. The x-axis shows the index or order of data entries, while the y-axis indicates the number of previous contacts for each client. This visualization allows us to observe patterns over the dataset, such as any peaks or drops in the frequency of previous contacts. Such trends may reveal insights into client engagement history and could inform strategies to enhance campaign effectiveness based on prior interactions.
-                    </p>
-                </div>
-            </div>
-            <br>
-            <div class="chart-container">
-                <!-- Chart 1: Sales Data -->
-                <div class="chart-item">
-                    <h2>Campaign Contact Frequency per Client</h2>
-                    <img src="pic3.png"></img>
-                    <p class="chart-description">
-                        <br><br><br>The line chart shows the trend for the campaign variable, representing the number of contacts made during the current campaign for each client. The x-axis corresponds to the data entry index or order, and the y-axis shows the number of contacts per client. This visualization provides insights into the frequency of campaign contacts across clients, highlighting any potential spikes or patterns in the campaign's outreach efforts. By analyzing these trends, we can gauge the intensity of contact attempts and assess the effectiveness or saturation of the campaign, which could help optimize future marketing strategies.                    </p>
-                </div>
-
-                <!-- Chart 2: User Growth -->
-                <div class="chart-item">
-                    <h2>Correlation Matrix of Client Attributes</h2>
-                    <img src="pic4.png"></img>
-                    <p class="chart-description">
-                        The heatmap provides a visual overview of the correlation matrix, showing the strength and direction of relationships between variables in the dataset. Using a "YlGnBu" color scheme, lighter colors indicate weaker or negative correlations, while darker shades signify stronger positive correlations. Each cell includes an annotation with the exact correlation value, making it easy to identify significant associations between variables. This visualization is useful for quickly spotting patterns, aiding in feature selection, and gaining insights into how different variables might interact within the dataset.                    </p>
-                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                
+                                <div class="card mb-4">
+                                    <img src="assets/img/dashboard1.jpg" style="height: 700px; width: 740px; border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);" data-aos="fade-up" data-aos-delay="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
-
-        <!-- Tableau Visualizations Section -->
-        <div class="section">
-            <h2>Tableau Visualizations</h2>
-            <div class="chart-container">
-                <!-- Embed Tableau Visualization 1 -->
-                <div class="chart-item">
-                    <h2>Contact and Education Distribution</h2>
-                    <p>Dataset Used: Bank-additional-full.csv</p>
-                    <img src="tab1.png" style="height: 550px;" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                    <div id="myModal" class="modal">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <img class="modal-content" id="img01">
-                      </div>
-                </div>
-                <!-- Embed Tableau Visualization 2 -->
-                <div class="chart-item">
-                    <h2>Housing and Job Influence on Consumer Indices</h2>
-                    <p>Dataset Used: Bank-additional.csv</p>
-                    <img src="tab2.png" style="height: 550px; width: 550px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                    <div id="myModal" class="modal">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <img class="modal-content" id="img01">
-                      </div>
-                </div>
-                <div class="chart-item">
-                    <h2>Impact of Loan and Marital Status on Duration and Pdays</h2>
-                    <p>Dataset Used: Bank-full.csv</p>
-                    <img src="tab3.png" style="height: 380px;" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                    <div id="myModal" class="modal">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <img class="modal-content" id="img01">
-                      </div>
-                </div>
-                <!-- Embed Tableau Visualization 2 -->
-                <div class="chart-item">
-                    <h2>Housing and Job Influence on Consumer Indices</h2>
-                    <p>Dataset Used: Bank-additional.csv</p>
-                    <img src="tab4.png" style="height: 380px; width: 550px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                    <div id="myModal" class="modal">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <img class="modal-content" id="img01">
-                      </div>
-                </div>
-                
-            </div>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Dashboard - 1</h2>
-                <img src="dash1.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Dashboard - 2</h2>
-                <img src="dash2.png" style="height: 380px; width: 1200px;  object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Dashboard - 3</h2>
-                <img src="dash3.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Distribution of Contact Method and Education Level in Dataset</h2>
-                <p>The graph illustrates the relationship between contact methods and education levels within the dataset. It shows that individuals with a university degree contacted via cellular methods have the highest count, while those with a basic education of 9 years have the lowest count.</p>
-                <img src="story1.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Impact of Housing and Job Type on Consumer Confidence and Price Index</h2>
-                <p>The graph analyzes the relationship between housing status and job types concerning the sum of consumer confidence and consumer price indices. It reveals that a majority of respondents have housing loans ('yes'), with very few cases marked as 'unknown' regarding housing status. This suggests a strong prevalence of housing among individuals in the dataset.</p>
-                <img src="story2.png" style="height: 380px; width: 1200px;  object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Tree Map of Loan Status and Marital Status Impact on Duration and Pdays</h2>
-                <p>The tree map illustrates the relationship between loan status and marital status in relation to the sum of duration and Pdays. The analysis indicates that married individuals tend to have a higher number of Pdays, suggesting a greater engagement with loan services compared to other marital statuses. This insight highlights the importance of marital context in understanding loan dynamics within the dataset.</p>
-                <img src="story3.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Analysis of Potcome, Subscription Status, and Monthly Counts in Dataset</h2>
-                <p>The analysis examines the relationship between the outcome of previous marketing campaigns (Potcome), subscription status (Y), and the count of records per month. The findings reveal that May has the highest count, indicating a significant level of engagement during this month compared to others in the dataset. This pattern suggests that marketing efforts may have been particularly effective in May.</p>
-                <img src="story4.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Dashboard Overview of Bank-full and Bank Datasets</h2>
-                <p>This dashboard presents detailed insights into the bank-full and bank datasets, which are not ordered by date. It highlights key metrics, distributions, and characteristics of the data, enabling users to explore patterns and trends without the influence of chronological ordering. This format allows for a comprehensive understanding of customer behaviors and outcomes within the datasets.</p>
-                <img src="story5.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Dashboard Overview of Bank-additional-full and Bank-additional Datasets</h2>
-                <p>This dashboard provides a comprehensive overview of the bank-additional-full and bank-additional datasets, both of which are ordered by date. It showcases essential metrics, trends, and distributions, allowing for an analysis of how marketing campaigns have evolved over time. This chronological organization facilitates a deeper understanding of customer responses and campaign effectiveness, highlighting key insights for strategic decision-making.</p>
-                <img src="story6.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div><br>
-            <div class="chart-item" style="width: 1200px;">
-                <h2>Comprehensive Dashboard of Portuguese Banking Institution Datasets</h2>
-                <p>This dashboard presents visualizations of all four datasets from the Portuguese banking institution, including bank-additional-full, bank-additional, bank-full, and bank. Each visualization offers insights into various aspects of the marketing campaigns, customer demographics, and responses to term deposit subscriptions. By integrating data from these datasets, the dashboard enables users to explore trends, patterns, and correlations, supporting informed decision-making and strategy development in direct marketing efforts.</p>
-                <img src="story7.png" style="height: 380px; width: 1200px; object-fit: cover; object-position:top" alt="Zoomable Image" class="zoom-image"  onclick="openModal()"></img>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Analysis Section -->
-        <div class="project-analysis">
-            <h2>Project Analysis</h2>
-            <p>
-                The analysis of the Portuguese banking datasets reveals crucial insights into customer behavior and campaign effectiveness. By leveraging these findings, the bank can enhance its marketing strategies, tailor communications to target demographics more effectively, and ultimately increase the success rate of term deposit subscriptions. Further analysis could involve predictive modeling to forecast client responses based on historical data.
-            </p>
-            <h2>Key Findings</h2>
-            <p>
-                Customer Engagement: Cellular contact methods yielded the highest engagement rates, particularly among individuals with university degrees.<br>
-                Marital Status and Loan Impact: Married individuals were more likely to have higher Pdays, indicating a stronger connection to previous marketing efforts.<br>
-                Monthly Trends: The month of May exhibited the highest count of customer interactions and subscriptions, suggesting effective campaign timing.<br>
-                Housing Status: The majority of customers reported having housing loans, with minimal cases marked as unknown, indicating a strong prevalence of housing.</p>
-            <h2>Recommendations</h2>
-            <p>
-                Focus marketing efforts on segments with the highest engagement rates, such as university-educated individuals.<br>
-                Continuously monitor the influence of housing status and other socio-economic factors on customer responses.<br>
-                Analyze the success of campaigns during peak months (like May) to optimize future marketing strategies.
-            </p>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Project Name. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Inline JavaScript for initializing the charts -->
-    <script>
-        // Sales Data Chart
-        const salesChartCtx = document.getElementById('salesChart').getContext('2d');
-        new Chart(salesChartCtx, {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-                datasets: [{
-                    label: 'Sales ($)',
-                    data: [12000, 15000, 10000, 22000, 20000, 25000],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    fill: true,
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-
-        // User Growth Chart
-        const userGrowthChartCtx = document.getElementById('userGrowthChart').getContext('2d');
-        new Chart(userGrowthChartCtx, {
-            type: 'bar',
-            data: {
-                labels: ['2019', '2020', '2021', '2022', '2023'],
-                datasets: [{
-                    label: 'Users',
-                    data: [500, 1000, 1500, 2000, 2500],
-                    backgroundColor: 'rgba(153, 102, 255, 0.6)',
-                    borderColor: 'rgba(153, 102, 255, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-        function openModal() {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("img01");
-            modal.style.display = "flex"; // Shows the modal in flex mode
-            modalImg.src = event.target.src; // Uses the clicked image as the source
-        }
-
-        // Close the modal
-        function closeModal() {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none"; // Hides the modal
-        }
-    </script>
-
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
 </html>

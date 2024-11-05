@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Data Visualization Techniques</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Data Visualization</a>
+            <!-- Sidebar Toggle-->
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="index.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Home</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="charts.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Charts</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="dashboards.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Dashboards</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <a href="stories.html" role="button" aria-expanded="false" style="text-decoration: none; color: rgba(255, 255, 255, 0.5);">Stories</i></a>
+            </ul>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Datasets</i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="bank.html">Bank</a></li>
+                        <li><a class="dropdown-item" href="bank-full.html">Bank-full</a></li>
+                        <li><a class="dropdown-item" href="bank-additional.html">Bank-additional</a></li>
+                        <li><a class="dropdown-item" href="bank-additional-full.html">Bank-additional-full</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Charts</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Charts</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                Python Charts
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        Client Job Distribution by Age
+                                    </div>
+                                    <img src = "assets/img/pic1.png">
+                                    <div class="card-footer small text-muted">The bar chart illustrates the distribution of clients across different age groups and job types within the dataset. The x-axis represents the ages of clients, while the y-axis denotes the number of clients in each job category. Each bar's height shows the frequency of clients of a specific age working in a given job role. This visualization helps identify trends in job distribution across various age groups, which could be useful for understanding target demographics for marketing campaigns. For instance, certain jobs might have higher frequencies within specific age brackets, indicating potential target groups for the bank's term deposit offers.</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie me-1"></i>
+                                        Trend of Previous Client Contacts
+                                    </div>
+                                    <img src="assets/img/pic2.png" style="height: 480px;">
+                                    <div class="card-footer small text-muted">The line chart displays the trend of the previous variable, which represents the number of contacts made with each client prior to the current campaign. The x-axis shows the index or order of data entries, while the y-axis indicates the number of previous contacts for each client. This visualization allows us to observe patterns over the dataset, such as any peaks or drops in the frequency of previous contacts. Such trends may reveal insights into client engagement history and could inform strategies to enhance campaign effectiveness based on prior interactions.</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie me-1"></i>
+                                        Campaign Contact Frequency per Client
+                                    </div>
+                                    <img src="assets/img/pic3.png" style="height: 480px;">
+                                    <div class="card-footer small text-muted">The line chart shows the trend for the campaign variable, representing the number of contacts made during the current campaign for each client. The x-axis corresponds to the data entry index or order, and the y-axis shows the number of contacts per client. This visualization provides insights into the frequency of campaign contacts across clients, highlighting any potential spikes or patterns in the campaign's outreach efforts. By analyzing these trends, we can gauge the intensity of contact attempts and assess the effectiveness or saturation of the campaign, which could help optimize future marketing strategies.</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie me-1"></i>
+                                        Correlation Matrix of Client Attributes
+                                    </div>
+                                    <img src="assets/img/pic4.png" style="height: 480px;">
+                                    <div class="card-footer small text-muted">The heatmap provides a visual overview of the correlation matrix, showing the strength and direction of relationships between variables in the dataset. Using a "YlGnBu" color scheme, lighter colors indicate weaker or negative correlations, while darker shades signify stronger positive correlations. Each cell includes an annotation with the exact correlation value, making it easy to identify significant associations between variables. This visualization is useful for quickly spotting patterns, aiding in feature selection, and gaining insights into how different variables might interact within the dataset.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                Tableau Charts
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        Contact and Education Distribution
+                                    </div>
+                                    <img src = "assets/img/tab1.png">
+                                    <div class="card-footer small text-muted">Dataset Used: Bank-additional-full.csv</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie me-1"></i>
+                                        Housing and Job Influence on Consumer Indices
+                                    </div>
+                                    <img src="assets/img/tab2.png" style="height: 655px;">
+                                    <div class="card-footer small text-muted">Dataset Used: Bank-additional.csv</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie me-1"></i>
+                                        Impact of Loan and Marital Status on Duration and Pdays
+                                    </div>
+                                    <img src="assets/img/tab3.png" style="height: 480px;">
+                                    <div class="card-footer small text-muted">Dataset Used: Bank-full.csv</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie me-1"></i>
+                                        Housing and Job Influence on Consumer Indices
+                                    </div>
+                                    <img src="assets/img/tab4.png" style="height: 480px;">
+                                    <div class="card-footer small text-muted">Dataset Used: Bank-additional.csv</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="assets/demo/chart-pie-demo.js"></script>
+    </body>
+</html>
