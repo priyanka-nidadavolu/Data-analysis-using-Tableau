@@ -1,5 +1,10 @@
 **Customer Response Analysis in Direct Marketing Campaigns**
 
+
+[Project Link](https://priyanka-nidadavolu.github.io/Data-analysis-using-Tableau/)
+
+[Python execution](https://colab.research.google.com/drive/1Q6MzuCmg7bv3n3YXMRqiCOoXPTxipYo-)
+
 This project helps us understand direct marketing techniques of a Portuguese banking institution. This  will help us understand the trends and make analysis on the data by visualizing it. Data visualization  gives us a clear idea of what the information means by giving it visual context through maps or  graphs. This makes the data more natural for the human mind to comprehend and therefore makes it  easier to identify trends, patterns, and outliers within large data sets.The main objective of this project is to visualize the given bank dataset in Tableau and Python.
 
 <br>
@@ -29,7 +34,7 @@ Matplotlib: Python based plotting library offers matplotlib with a complete 2D s
 
 Seaborn: Seaborn is a library for creating informative and attractive statistical graphics in python.  This library is based on matplotlib. Seaborn offers various features such as built in themes, color  palettes, functions and tools to visualize univariate, bivariate, linear regression, matrices of data,  statistical  time     series   etc   which   lets     us   to     build     complex   visualizations.
 
-You can refer to the execution by checking this [link](https://colab.research.google.com/drive/1Q6MzuCmg7bv3n3YXMRqiCOoXPTxipYo-)
+
 <br><br>
 
 ***TABLEAU SCREENSHOTS***
